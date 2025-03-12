@@ -4,9 +4,10 @@ import 'package:icons_plus/icons_plus.dart';
 
 class FAppBar extends StatelessWidget implements PreferredSizeWidget {
   const FAppBar({
-    super.key,
+    super.key, 
+    required this.title,
   });
-
+  final String title;
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 
@@ -14,7 +15,7 @@ class FAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(
-        'Mega shop',
+        title,
         style: TextStyle(
           fontFamily: "DMSans",
           fontWeight: FontWeight.w700,
