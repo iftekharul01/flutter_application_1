@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/widgets/app_bar.dart';
+import 'package:flutter_application_1/screens/home/page/home_screen.dart';
 import 'package:flutter_application_1/screens/home/widget/bottom_nav_bar.dart';
 import 'package:icons_plus/icons_plus.dart';
 
@@ -13,10 +14,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
-    Container(
-      color: Colors.green,
-      height: double.infinity,
-    ),
+    HomeScreen(),
     Container(
       color: Colors.redAccent,
       height: double.infinity,
