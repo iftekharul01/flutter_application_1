@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/common/widgets/app_bar.dart';
+import 'package:flutter_application_1/screens/home/widget/bottom_nav_bar.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 class Home extends StatefulWidget {
@@ -44,32 +45,10 @@ class _HomeState extends State<Home> {
         secondIcon: IonIcons.cart,
       ),
       body: _screens[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-          onTap: _onTapMethod,
-          currentIndex: _currentIndex,
-          type: BottomNavigationBarType.fixed,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Iconsax.home_outline),
-              label: 'HOME',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Iconsax.heart_outline),
-              label: 'WISHLIST',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Iconsax.shopping_bag_outline,
-              ),
-              label: 'ORDER',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Iconsax.user_outline,
-              ),
-              label: 'ACCOUNT',
-            ),
-          ]),
+      bottomNavigationBar: FBottomBar(
+        currentIndex: _currentIndex,
+        onTapMethod: _onTapMethod,
+      ),
     );
   }
 }
