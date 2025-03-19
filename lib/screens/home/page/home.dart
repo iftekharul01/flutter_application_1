@@ -8,9 +8,33 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: FAppBar(title: 'Mega shop', 
-      secondIcon: IonIcons.cart,
+      appBar: FAppBar(
+        title: 'Mega shop',
+        secondIcon: IonIcons.cart,
       ),
+      bottomNavigationBar:
+          BottomNavigationBar(type: BottomNavigationBarType.fixed, items: [
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.home_outline),
+          label: 'HOME',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.heart_outline),
+          label: 'WISHLIST',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Iconsax.shopping_bag_outline,
+          ),
+          label: 'ORDER',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Iconsax.user_outline,
+          ),
+          label: 'ACCOUNT',
+        ),
+      ]),
     );
   }
 }
